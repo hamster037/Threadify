@@ -10,18 +10,20 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { signIn } = useAuth();
 
   const handleLogin = async () => {
+    setError(null);
     if (!email || !password) {
-      Alert.alert('Error', 'Please fill in all fields');
+      setError('Please fill in all fields');
       return;
     }
     setLoading(true);
     try {
       await signIn(email, password);
-    } catch (error: any) {
-      Alert.alert('Login Failed', error.message);
+    } catch (err: any) {
+      setError(err.message || 'Login failed');
     } finally {
       setLoading(false);
     }
@@ -47,6 +49,11 @@ export default function LoginScreen() {
 
             {/* Form */}
             <View className="space-y-4">
+              {error ? (
+                <View className="bg-red-50 p-3 rounded-lg border border-red-200">
+                  <Text className="text-red-600 text-sm text-center font-medium">{error}</Text>
+                </View>
+              ) : null}
               <Input
                 label="Email"
                 placeholder="Enter your email"
