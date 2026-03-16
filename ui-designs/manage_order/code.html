@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b7860b",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-white dark:bg-background-dark border-b border-primary/10 p-4 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Active Order #TR-8821</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<main class="max-w-xl mx-auto pb-24">
+<!-- Customer & Item Info -->
+<section class="bg-white dark:bg-background-dark p-4 mt-2">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border-2 border-primary/20" data-alt="Profile picture of customer Sneha R." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdzhbhxSvDQc_k8i5r_-uXuHqDZlRX7ZX4suAy8LTkMWiryF2GaNws3-rGjrOLL2_gYKiFrXYbhBckezmRtwjnLzNddGJtR3nwtsQ5o63hnqJqJR2DcvptQe1vQBQZ1llwaTP3yAlhmTnc6AfV4s2_lUI0IiBKxzzziDn2i7vlxk9SIa-KOfKLFRWdMg9aHBqcZ5qeK8oqyFmfH-wmfCtuU5qv8HbiA5gCc5NLrmptfITssnUA4Xah1xY6yYitHNia4O89J-m7ZK1C");'></div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Sneha R.</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Linen Shirt - Custom Tailoring</p>
+</div>
+<div class="shrink-0 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    In Progress
+                </div>
+</div>
+<!-- Measurements Grid -->
+<div class="grid grid-cols-3 gap-2 py-3 border-y border-primary/10">
+<div class="text-center border-r border-primary/10 last:border-0">
+<p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Chest</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold">38"</p>
+</div>
+<div class="text-center border-r border-primary/10 last:border-0">
+<p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Waist</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold">34"</p>
+</div>
+<div class="text-center">
+<p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Length</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold">28"</p>
+</div>
+</div>
+</section>
+<!-- Status Update Panel -->
+<section class="bg-white dark:bg-background-dark p-4 mt-2 border-y border-primary/10">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold mb-4 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">edit_note</span> Update Progress
+            </h3>
+<div class="grid grid-cols-2 gap-3 mb-4">
+<button class="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 py-3 rounded-lg flex flex-col items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span class="text-[11px] font-bold">Fabric Sourced</span>
+</button>
+<button class="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 py-3 rounded-lg flex flex-col items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-xl">architecture</span>
+<span class="text-[11px] font-bold">Mark Cutting</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white py-3 rounded-lg flex flex-col items-center gap-1 transition-colors col-span-2">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+<span class="text-[11px] font-bold">Mark Stitching Complete</span>
+</button>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold text-slate-500 uppercase">Add Update Note (optional)</label>
+<textarea class="w-full bg-background-light dark:bg-slate-800 border border-primary/10 rounded-lg p-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none min-h-[80px]" placeholder="Explain progress or mention specific details..."></textarea>
+<button class="w-full text-primary text-xs font-bold py-2 border-b-2 border-transparent hover:border-primary transition-all">POST UPDATE</button>
+</div>
+</section>
+<!-- Real-time Chat Panel -->
+<section class="bg-white dark:bg-background-dark p-4 mt-2 border-y border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">forum</span> Chat with Sneha
+                </h3>
+<span class="bg-green-500 size-2 rounded-full animate-pulse"></span>
+</div>
+<div class="bg-background-light dark:bg-slate-900/50 rounded-xl p-3 space-y-3 mb-3 border border-primary/5">
+<div class="flex flex-col items-start max-w-[80%]">
+<div class="bg-white dark:bg-slate-800 p-3 rounded-xl rounded-tl-none shadow-sm text-sm border border-primary/5">
+                        Hi, how is the shirt coming along?
+                    </div>
+<span class="text-[10px] text-slate-400 mt-1 ml-1">10:30 AM</span>
+</div>
+<div class="flex flex-col items-end max-w-[80%] ml-auto">
+<div class="bg-primary text-white p-3 rounded-xl rounded-tr-none shadow-sm text-sm">
+                        Just finished the cutting. The linen fabric you chose looks great!
+                    </div>
+<span class="text-[10px] text-slate-400 mt-1 mr-1">10:45 AM</span>
+</div>
+</div>
+<div class="flex gap-2">
+<input class="flex-1 bg-background-light dark:bg-slate-800 border border-primary/10 rounded-full px-4 py-2 text-sm outline-none" placeholder="Type a message..." type="text"/>
+<button class="bg-primary text-white size-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+</div>
+</section>
+<!-- Payout Breakdown -->
+<section class="bg-white dark:bg-background-dark p-4 mt-2 mb-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold mb-4 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">payments</span> Payout Breakdown
+            </h3>
+<div class="space-y-3 bg-primary/5 rounded-xl p-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Order Total</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">₹2,450.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Platform Fee (15%)</span>
+<span class="text-red-500 font-medium">- ₹367.50</span>
+</div>
+<div class="pt-2 border-t border-primary/10 flex justify-between">
+<span class="text-slate-900 dark:text-slate-100 font-bold">Estimated Payout</span>
+<span class="text-primary font-bold text-lg">₹2,082.50</span>
+</div>
+</div>
+<p class="text-[10px] text-slate-400 mt-3 text-center italic">Funds will be credited to your wallet 24h after delivery confirmation.</p>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 flex justify-around items-center px-4 py-3 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<p class="text-[10px] font-bold uppercase">Orders</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<p class="text-[10px] font-bold uppercase">Chat</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<p class="text-[10px] font-bold uppercase">Earnings</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase">Profile</p>
+</a>
+</nav>
+</body></html>

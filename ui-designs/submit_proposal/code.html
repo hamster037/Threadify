@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b7860b",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23b7860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5em;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto bg-white dark:bg-background-dark min-h-screen shadow-xl flex flex-col">
+<!-- Top Navigation -->
+<div class="flex items-center p-4 border-b border-primary/10">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined block">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold ml-2">Submit Proposal</h1>
+</div>
+<!-- Request Summary Component -->
+<div class="p-4 border-b border-primary/10 bg-primary/5">
+<p class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Request Summary</p>
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0 border border-primary/20" data-alt="Close up of white oversized linen fabric" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7Sz5Bm9ElyCQ3Dt5KOD2APTvFOH1uopFz8xKAY2m4V9S6L-6xYwXzGWXZhgrDytGbsPDHrjg50EtMDa5TWsE1lVJSzSKlMG-fqIpy0HdiNlAmgIUlUxqVqN_t1_5XlnzVGpBzzL_yoATIRPcr4bWI3aVhe_SOAsb6VFax8cHAku-YH5qFxwpfd-v8eHC4jF3bZc7bW_Bas7ZLazkAXLACmVY2dFto8bmSylBSQedc_AB_5Swsnw6mHdkS3HPrNnwul_K5hmZSq_UE')"></div>
+<div class="flex-1">
+<h2 class="text-base font-bold leading-tight">Oversized Linen Shirt</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+                        Customer: Sneha R.
+                    </p>
+<p class="text-slate-500 dark:text-slate-500 text-xs mt-1">Requested 2 days ago</p>
+</div>
+</div>
+</div>
+<!-- Proposal Form -->
+<div class="p-4 space-y-6 flex-1">
+<!-- Quoted Price -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Quoted Price (₹)</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">₹</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark focus:ring-primary focus:border-primary transition-all" placeholder="e.g. 2500" type="number"/>
+</div>
+</div>
+<!-- Delivery Date -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Estimated Delivery Date</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-lg border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark focus:ring-primary focus:border-primary transition-all" type="date"/>
+</div>
+</div>
+<!-- Proposal Note -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Proposal Note</label>
+<textarea class="w-full p-4 rounded-lg border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark focus:ring-primary focus:border-primary transition-all resize-none" placeholder="Describe your approach, materials you'll use, or ask for clarifications..." rows="4"></textarea>
+</div>
+<!-- Attach Reference Images -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Reference Images (Optional)</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="aspect-square rounded-lg border-2 border-dashed border-primary/30 flex flex-col items-center justify-center text-primary hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">add_a_photo</span>
+<span class="text-[10px] mt-1 font-medium">Add</span>
+</button>
+<!-- Mock uploaded image -->
+<div class="relative group aspect-square rounded-lg bg-cover bg-center border border-primary/10" data-alt="Linen shirt design reference" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWdlmRt9cgN71C65XrCm_PvkQ96gtyQjP1kMkqz__vq3gcYwO6n4RxRLW4DgkHkfK7UK4Fl5xPBA9AFyXSbvMgZMNehA8t-P4VQTebSAMaZJHwIsX7F24wpZbZzSj89AUpJN76rd0ZS8GZOd9cMGD2eUXfkUdjHCAD4umqeA1vGFD52UtP8Z2PltF1db_V_Yz60-EFsAwobGyJkS3NvJC4walugcDMGMBzdhnS3hdpwUQDp4CU0r7-6FZp5kUeFpdzDo3Tz-kfbxHL')">
+<button class="absolute top-1 right-1 bg-white/80 rounded-full p-0.5 text-red-500 shadow-sm">
+<span class="material-symbols-outlined text-xs">close</span>
+</button>
+</div>
+</div>
+<p class="text-xs text-slate-500 mt-1">Show past work or fabric samples relevant to this request.</p>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-4 bg-white dark:bg-background-dark border-t border-primary/10 sticky bottom-0">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">send</span>
+                Submit Proposal
+            </button>
+<p class="text-[10px] text-center text-slate-400 mt-3 px-4">
+                By submitting, you agree to the Terms of Service. Proposals are visible to the customer for 7 days.
+            </p>
+</div>
+</div>
+</body></html>

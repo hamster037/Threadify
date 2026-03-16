@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b7860b",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-primary/10">
+<div class="flex items-center gap-4">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Tailor Profile</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 py-6 md:flex md:gap-8">
+<div class="flex-1">
+<!-- Hero Section -->
+<div class="relative rounded-xl overflow-hidden mb-6">
+<div class="h-48 w-full bg-gradient-to-r from-primary/40 to-primary/10" data-alt="Abstract golden silk fabric texture background"></div>
+<div class="px-6 -mt-16 pb-6 flex flex-col md:flex-row md:items-end gap-6 relative z-10">
+<div class="size-32 rounded-full border-4 border-white dark:border-background-dark overflow-hidden bg-white shadow-xl">
+<img alt="Ravi Kumar Portrait" class="w-full h-full object-cover" data-alt="Professional portrait of a male tailor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCwpK524r4u2PaQkm1KBDllTlIOo4gzNxPezlbJ_oT80NapofXXV_eKayLAJSU5mOVQkS_x8Z-pqNRl6vfqRstoy5MZKousXB_jYv-OW73S5J7BXtst3iFpcmt2sexl7qycsAbVcquRBT2iyhFuIMWZP8NrMwA7L1xLbvVYRBMQj66HtuJPilA3oPxQZn-kNQqKA32qkJpUnEdhg61-1ZtykMZR9Bj4w8Xm44nzonpuPGmJui7m3sBUq6ZDMQwbNbXxDMmEKgDf1hI"/>
+</div>
+<div class="flex-1">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Ravi Kumar</h1>
+<div class="flex items-center gap-2 text-primary font-medium mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Delhi, India</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl">Master craftsman specializing in bespoke ethnic wear and contemporary wedding suits. 15+ years of tradition.</p>
+</div>
+</div>
+</div>
+<!-- Stats & Tags -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-primary/10">
+<p class="text-sm text-slate-500 dark:text-slate-400">Rating</p>
+<div class="flex items-center gap-1">
+<span class="text-xl font-bold">4.9</span>
+<span class="material-symbols-outlined text-primary text-sm">star</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-primary/10">
+<p class="text-sm text-slate-500 dark:text-slate-400">Reviews</p>
+<p class="text-xl font-bold">128</p>
+</div>
+<div class="col-span-2 flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<span class="px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full whitespace-nowrap">Kurtas</span>
+<span class="px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full whitespace-nowrap">Suits</span>
+<span class="px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full whitespace-nowrap">Sherwanis</span>
+<span class="px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full whitespace-nowrap">Alterations</span>
+</div>
+</div>
+<!-- Portfolio Grid -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Portfolio</h3>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="space-y-4">
+<div class="relative group rounded-lg overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Elegant blue tailored suit on mannequin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2QOc4r5jjxza50BBVeyFmMya9GHMSXHZ3LJfOwlXanbxEDyoQ1x_eziA4u1rxa4nB-sEyD32WTS31EIIAa7Cjtug3hHRXqR2W4a03SZT2V8Y3a1pO_y3mctgyce62gglv3OA-Zwv2kyDgL9j6QoHaPuSl6cO7UnCKT8yGHwHw8SQy9ywekJ__LFuQ4RoK_GVZbHTVwvwQ_eQkYgsHvKJms4I992CwzgdoMku8_4R4DJCwd_O91zFuv1_DJUO6_mtMIXAoZmIw4WIG"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Italian Slim Fit Suit</p>
+</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="Traditional white kurta with embroidery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc9V0r-wlcP6Gntl8PN0YLlcQkYhYdiwLH6AW0nXj-n8WI331u2v3XCFhtPq2oYqhh3_VtjKIa9lpluT54Jzh5F5c1FAaw6NqGR1JxeNuIaz1uvmcER3AM5NPXjK_hb4HSMLK5leJfiYByqbB8XJwzj_3CMojuq8EohLgdYpyAGzfsjbTTEhWq3USstX0uZ-ujRelgCb9-SswZMUWoz4psRQFzvQU6z3gKPUGIw44TdSAb74m6T1_p5x4RuHpc9AhIBGZ0HPQtN7Og"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Linen Summer Kurta</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative group rounded-lg overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="Detailed stitching on a suit sleeve" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnd2KveUaAopEWE5vGyOctb5QkaPrcWWLvWrS35P4OxuJO58G2sbaevucwDG40YTKlrJO-ISpqiFIzaiYdBGH2mrGzMnhhvGEcE8DlaU0H0Bv8LQKpsn9LVRZgCeuwL4mUjJAbGd6S9hpqvWtLWu2TgtxBWeoj3tEpTjQBI1SFREqviS8Ec2ISqHK6-D1-ZxRUXHXV0y-Mrni7aY2UCKVD5MpI2FgYyLITcXRO5iWSbbcESl6v7GfnaKKpjMc4zeIjuLUlHtRWkdX"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Bespoke Cuffs</p>
+</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Velvet wedding sherwani" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_8WJX0dnxD_B5sjpGfc9AkkoJl4DBUNjVzHE1f_NLseLmJS_2ezpF085uZy2pJgNlGKzYbUf4mwPrjEoL9t0LE3rtHVFYJQ1pZKmoFLxYEqynKEy2EAYOO0pvwSba667QqW4MnBdYPtpGuAAe2nYilUgZykppLOmqazkgjbri7WL8QvuUmJMF8fbp5CTfgbH69CaXuTrrm6sYR9ntt2Z5U6zy08PaPlyK_MX4Ea8LNJDVNoczkGvIuDx2APNprz2za1l-1XFCgsRn"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Velvet Sherwani</p>
+</div>
+</div>
+</div>
+<div class="space-y-4 hidden md:block">
+<div class="relative group rounded-lg overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Premium brown leather detail on jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcJc3XeQ5uRPpMOuH9cZn5XRw5efv8uxv1cZAHBnaa_ao-9pa8i0Dy4VHdjqvFDsUGOS5wBCTxQOWSs4GafQe2rnHNDTmZ9O70O-TFQsctr3a347IPId-jcaKG1tfSu4GSz2nox8f1XRcHT2lRBElSQnxeWVxUksxtxl6Ked6u81MPAG5tvTR1hCW6SI8YGA4TdeaidPo6U5GrFq8vpwZVYZTNuMYEcR7MzD6nbBnm2xedZE_yC_lo0F378QgFxYKVJ2_isNhbzzXS"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Leather Accent Jacket</p>
+</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="Close up of fabric selection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcMjJIGtM3edrOb-lO1idNlFq1HC85i-gVgDdsjW4ceZ9fRSEZIugBCahV5h_Ky8Zkcbc5KtIFPx9ZkAbiCJMALNXN7TLeJfZ4i_B9hHwPU18Q6jLmYSgMWZdsijAp41GOUC4OK13W1ripf5QzqR2AVxIOVmzDDn0VpilkWOil1Fm8USqTz6Ezyk-59ySkEYcl9eLoAQCT6I3z7_ILK7Ze4wq1P8633nJqrFbJIhACIdFJkeH2mr-6QBp5aclTAab7IzFDF5AI0eQa"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+<p class="text-white text-xs font-medium">Fabric Swatches</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="mb-10">
+<h3 class="text-xl font-bold mb-4">Customer Reviews</h3>
+<div class="space-y-4">
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">A</div>
+<div>
+<p class="font-bold text-sm">Amit Sharma</p>
+<p class="text-xs text-slate-500">2 weeks ago</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic leading-relaxed">"The fit of the suit Ravi made for my wedding was impeccable. He really pays attention to the smallest details of the measurement."</p>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">P</div>
+<div>
+<p class="font-bold text-sm">Priya V.</p>
+<p class="text-xs text-slate-500">1 month ago</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star_half</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic leading-relaxed">"Excellent work on the kurtas. Delivered on time and the finish was professional. Will definitely visit again."</p>
+</div>
+</div>
+<button class="w-full mt-4 py-3 border border-primary/20 text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+                        Read All 128 Reviews
+                    </button>
+</section>
+</div>
+<!-- Sticky Sidebar -->
+<aside class="w-full md:w-80 shrink-0">
+<div class="sticky top-24 bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/20 shadow-lg">
+<div class="mb-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">Starting from</p>
+<p class="text-3xl font-bold text-primary">₹1,200 <span class="text-sm text-slate-500 font-normal">/ garment</span></p>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<span>Quality Guaranteed</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-lg">schedule</span>
+<span>Standard 7-day Delivery</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-lg">home_repair_service</span>
+<span>Home measurement available</span>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-md transition-all">
+                            Request This Tailor
+                        </button>
+<button class="w-full bg-primary/10 hover:bg-primary/20 text-primary font-bold py-4 rounded-lg transition-all">
+                            Message Ravi
+                        </button>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-700">
+<p class="text-xs text-center text-slate-500">Ravi usually responds within 2 hours</p>
+</div>
+</div>
+<!-- Availability Badge -->
+<div class="mt-6 bg-green-500/10 border border-green-500/20 p-4 rounded-xl flex items-center gap-3">
+<div class="size-2 rounded-full bg-green-500 animate-pulse"></div>
+<p class="text-sm font-semibold text-green-700 dark:text-green-400">Available for new orders</p>
+</div>
+</aside>
+</main>
+<!-- Bottom Tab Bar (Mobile Only) -->
+<div class="md:hidden sticky bottom-0 z-50 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Starting at</span>
+<span class="text-lg font-bold text-primary">₹1,200</span>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-lg">
+                Book Now
+            </button>
+</div>
+</div>
+</body></html>

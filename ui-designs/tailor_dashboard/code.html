@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tailor Dashboard - Ravi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b7860b",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto bg-white dark:bg-zinc-900 min-h-screen shadow-xl flex flex-col">
+<!-- Header -->
+<header class="flex items-center p-4 justify-between sticky top-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md z-10">
+<div class="flex size-10 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Professional portrait of a male tailor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwVK3sxUwc0SXs4CjysAOtoTYQp0CyAiDqVasYvfX3IWNfh1APQwgCVe8okfeJBKYV5XF9mqZ6mlFb0_a3hxTAROwVMtw27tRgOVyyirfP0nwab1B3zEDZhmHsVbP0NgsbK-iTO-umQcJKnLzFEb7m60EXwd_AvzZ0UoOvyZOFx2RtElwkwdpw9mWidcqxam0ER4x0xinrw_slbvNU-KlLMl1cz-2k3WWmDv8Mi6OL2175YVtD2x2GI3y1szWmOV09JsM_XwCZpIBS");'></div>
+</div>
+<div class="flex-1 ml-3">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Good morning, Ravi ✦</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Master Tailor</p>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<!-- Earnings Card -->
+<div class="p-4">
+<div class="relative overflow-hidden flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-background-dark p-6">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">payments</span>
+</div>
+<div class="relative z-10">
+<p class="text-primary/80 text-sm font-medium uppercase tracking-wider">Total Earnings</p>
+<h3 class="text-primary text-4xl font-black mt-1">₹45,000</h3>
+<div class="flex items-center justify-between mt-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm">trending_up</span>
+<p class="text-slate-400 text-xs font-medium">+12% from last month</p>
+</div>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                                View Reports
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-3 gap-3 px-4">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-primary/10 border border-primary/20">
+<p class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-tighter">Active Orders</p>
+<p class="text-slate-900 dark:text-white text-2xl font-black">4</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-primary/10 border border-primary/20">
+<p class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-tighter">Proposals</p>
+<p class="text-slate-900 dark:text-white text-2xl font-black">12</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-primary/10 border border-primary/20">
+<p class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-tighter">Rating</p>
+<div class="flex items-center gap-1">
+<p class="text-slate-900 dark:text-white text-2xl font-black">4.9</p>
+<span class="material-symbols-outlined text-primary text-sm">star</span>
+</div>
+</div>
+</div>
+<!-- Tabs Navigation -->
+<div class="mt-6 border-b border-slate-200 dark:border-zinc-800">
+<div class="flex px-4">
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-primary text-primary">Open Requests</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 dark:text-slate-400">My Proposals</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 dark:text-slate-400">Active Orders</button>
+</div>
+</div>
+<!-- Feed Section -->
+<div class="p-4 space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Recent Requests Near You</h4>
+<span class="text-xs text-primary font-bold">Filter</span>
+</div>
+<!-- Request Card 1 -->
+<div class="bg-white dark:bg-zinc-800 rounded-xl border border-slate-200 dark:border-zinc-700 p-4 shadow-sm">
+<div class="flex gap-4">
+<div class="h-20 w-20 rounded-lg bg-cover bg-center shrink-0 border border-slate-100 dark:border-zinc-600" data-alt="Floral midi dress sample photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCciNpT1pLK3K7LfzTFZu2yG5mAphVAI5n3kqfegPOCJZqaM_PqSI-1CW5Eue2Lnj8DoGowYAAruh_pxNTtozi9c7VI-CrX2pg6OjQrKjLmTmCcvjlsg2rDKF5G41vxZ68Ggl4PtL68Wd-xnmCVMnMs5Rd4AziuhEPyM2tj0gxPpCrmhC8vERy4A0fUX0z2oKBGP0JiC2ugnIDyu59lq-lirvT6x4gz25uuRJizNUNxLU0DGpFNBaik1D5hxcVMcaRIZA-9j2_R-dEG");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="text-base font-bold text-slate-900 dark:text-white">Floral midi dress</h5>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">Urgent</span>
+</div>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span>₹1,800</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>14 days</span>
+</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-1">Custom fitting needed for lightweight summer fabric...</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-zinc-700 flex gap-2">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Submit Proposal</button>
+<button class="aspect-square bg-slate-100 dark:bg-zinc-700 text-slate-600 dark:text-slate-300 rounded-lg flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Request Card 2 (Placeholder) -->
+<div class="bg-white dark:bg-zinc-800 rounded-xl border border-slate-200 dark:border-zinc-700 p-4 shadow-sm opacity-80">
+<div class="flex gap-4">
+<div class="h-20 w-20 rounded-lg bg-cover bg-center shrink-0 border border-slate-100 dark:border-zinc-600" data-alt="Tailored suit jacket sample" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwxyPsnmPLzUzZt5xeGYM6AtmXdOqzh9VihHxA9fQmcFo0a69WaFk6qJ0SnnCn7HP92FY_H9cjovmR68mppnCaDI-ZYnqbyBJExXQbhE5Xt4baf9fg2E5ntwRN1MamV7IWtNkktRAFY50SjGNT4bQ1OLjiXDePWIYrxsYWTQx7CyqqF3rW8QhQ9I9EktFB8AZKHUJ8pTZ9jby2wvjumXkyrldaJIQ-qrZlbLfBevF1PtHpEAN7l8l0DfYPv1nQcJaQ_p5ndiLdu_5a");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="text-base font-bold text-slate-900 dark:text-white">Linen Suit Jacket</h5>
+<span class="bg-slate-100 dark:bg-zinc-700 text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded-full">Standard</span>
+</div>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span>₹4,500</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>21 days</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-zinc-700 flex gap-2">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Submit Proposal</button>
+<button class="aspect-square bg-slate-100 dark:bg-zinc-700 text-slate-600 dark:text-slate-300 rounded-lg flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 bg-white dark:bg-zinc-900 border-t border-slate-200 dark:border-zinc-800 flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-variation-fill">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px] font-bold">Jobs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Earnings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

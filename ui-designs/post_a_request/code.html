@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b7860b",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #b7860b;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md p-4 border-b border-primary/10 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-2">Describe your dream outfit</h2>
+<div class="size-10"></div>
+</div>
+<div class="flex flex-col p-4 space-y-6 pb-32">
+<!-- Reference Image Upload -->
+<div class="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 px-6 py-10">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold text-center">Upload reference images</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal text-center">Tap to upload photos of your dream outfit</p>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-sm">
+<span>Upload Image</span>
+</button>
+</div>
+<!-- Basic Info Form -->
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Outfit type</label>
+<select class="form-select w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary">
+<option>Select type</option>
+<option>Shirt</option>
+<option>Dress</option>
+<option>Suit</option>
+<option>Trousers</option>
+<option>Ethnic Wear</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Fabric</label>
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary" placeholder="e.g. Silk, Cotton" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Color</label>
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary" placeholder="e.g. Emerald Green" type="text"/>
+</div>
+</div>
+<!-- Occasion Tags -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Occasion</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full border border-primary/30 text-xs font-medium bg-primary/10 text-primary">Casual</span>
+<span class="px-4 py-1.5 rounded-full border border-primary/30 text-xs font-medium text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors">Formal</span>
+<span class="px-4 py-1.5 rounded-full border border-primary/30 text-xs font-medium text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors">Wedding</span>
+<span class="px-4 py-1.5 rounded-full border border-primary/30 text-xs font-medium text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors">Party</span>
+<span class="px-4 py-1.5 rounded-full border border-primary/30 text-xs font-medium text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors">Business</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Special notes</label>
+<textarea class="form-textarea w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary" placeholder="Add any specific details or customizations..." rows="3"></textarea>
+</div>
+</div>
+<!-- Measurements Section -->
+<div class="pt-4 border-t border-primary/10">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">straighten</span>
+                    Measurements (Optional)
+                </h3>
+<div class="flex flex-col md:flex-row gap-6 mb-6">
+<div class="flex-1 bg-primary/5 rounded-xl p-4 flex justify-center items-center min-h-[200px] border border-primary/10">
+<img class="max-h-48 object-contain rounded-lg mix-blend-multiply opacity-80" data-alt="Technical illustration of a human silhouette showing measurement lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1YmMFPKdoQ81o15bYO1osFK3I5z9XX9D7mtKC8LmONzqah0ZyY5CJ1ruHC0WH_dYDxwcKWtY1oBsc7kOVbITisVktEWeMu2fLB2xQ2noSQbGNRRd_fTJeaORqUvCniom5r17dYizaddYJSv7HSfMYm7cMye5bIbxvOeqOeRK9k7Y5_qBdpGEU7S2pW1ozleA7iKuPQ9IBNLecHWIixBioOYMdiqrE0Klzmxr1M_r0P8zskNImTTHMEl-r37MoK5v1-JtWkVgomBNv"/>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-3">
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Height (cm)</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="175" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Weight (kg)</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="70" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Chest</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="38" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Waist</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="32" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Hips</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="40" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-slate-500 uppercase">Shoulder</label>
+<input class="w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 p-2 text-sm focus:border-primary focus:ring-0" placeholder="18" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Budget and Deadline -->
+<div class="space-y-6 pt-4 border-t border-primary/10">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Budget Range</label>
+<span class="text-primary font-bold">₹500 – ₹10,000</span>
+</div>
+<input class="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer" max="10000" min="500" step="500" type="range"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Deadline</label>
+<div class="relative">
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary pr-10" type="date"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">calendar_month</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Submit Button -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/90 dark:bg-background-dark/90 backdrop-blur-md p-4 border-t border-primary/10">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">send</span>
+                Submit Request
+            </button>
+</div>
+</div>
+</body></html>
