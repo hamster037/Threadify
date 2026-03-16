@@ -14,6 +14,7 @@ export default function RegisterScreen() {
   const [role, setRole] = useState<UserRole>('customer');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { signUp } = useAuth();
 
   const handleRegister = async () => {
@@ -25,15 +26,36 @@ export default function RegisterScreen() {
     setLoading(true);
     try {
       await signUp(email, password, fullName, role);
-      Alert.alert('Success', 'Account created! Please check your email to verify.', [
-        { text: 'OK', onPress: () => router.replace('/(auth)/login') },
-      ]);
+      setIsSuccess(true);
     } catch (err: any) {
       setError(err.message || 'Registration failed');
     } finally {
       setLoading(false);
     }
   };
+
+  if (isSuccess) {
+    return (
+      <SafeAreaView className="flex-1 bg-background-light">
+        <View className="flex-1 justify-center px-6 py-12 items-center">
+          <View className="w-16 h-16 bg-primary/10 rounded-full items-center justify-center mb-6">
+            <Text className="text-3xl">✉️</Text>
+          </View>
+          <Text className="font-serif text-3xl font-bold text-slate-900 mb-4 text-center">
+            Check your email
+          </Text>
+          <Text className="text-center text-slate-500 mb-8 text-base">
+            We've sent a confirmation link to{'\n'}
+            <Text className="font-bold text-slate-700">{email}</Text>.{'\n'}
+            Please verify your email to continue.
+          </Text>
+          <View className="w-full">
+            <Button title="Go to Login" onPress={() => router.replace('/(auth)/login')} />
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView className="flex-1 bg-background-light">
